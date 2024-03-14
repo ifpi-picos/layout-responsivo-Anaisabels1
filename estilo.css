@@ -21,14 +21,10 @@ main{
     display: flex;
     gap: 10px;
     padding: 10px 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
     
 }
-main div{
-    width: 33%;
-    background-color: orange;
-    height: 100%;
-}
-
 header{
     background-color: blueviolet;
 }
@@ -37,6 +33,24 @@ footer{
     background-color: brown;
 }
 
-.dobro{
-    flex-grow: 2;
+main div{
+    width: 30%;
+    background-color: orange;
+    height: 100%;
+}
+
+@media (max-width: 768px){
+    main{
+        height: auto;
+    }
+    main div{
+        width: 45%;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 576px) {
+    main div{ 
+        width: 98%;
+    }
 }
